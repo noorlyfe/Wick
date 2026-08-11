@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Wick</title>
+<meta name="description" content="Wick is local-first: your habits and journal stay on your device. This page explains exactly what that means." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #14110d;
+    --bg-raise:  #1c1812;
+    --ink:       #ece4d6;
+    --ink-soft:  #b7ac9c;
+    --ink-mute:  #8a8073;
+    --ember:     #3a3025;
+    --flame:     #f2a65a;
+    --flame-hot: #ffd27a;
+    --flame-deep:#c9762f;
+    --measure:   66ch;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hanken Grotesk", system-ui, sans-serif;
+    font-size: 1.02rem;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: rgba(242,166,90,0.22); }
+
+  a {
+    color: var(--flame);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(242,166,90,0.32);
+    transition: border-color .2s ease, color .2s ease;
+  }
+  a:hover { border-color: var(--flame); color: var(--flame-hot); }
+  a:focus-visible {
+    outline: 2px solid var(--flame);
+    outline-offset: 3px;
+    border-radius: 2px;
+    border-bottom-color: transparent;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 2.5rem); }
+
+  /* ---------- Hero: the flame ---------- */
+  .hero { text-align: center; padding: clamp(4.5rem, 12vh, 8rem) 0 clamp(2.5rem, 6vh, 4rem); }
+
+  .flame-stage {
+    position: relative;
+    width: 120px; height: 120px;
+    margin: 0 auto clamp(1.5rem, 4vh, 2.5rem);
+  }
+  .glow {
+    position: absolute; inset: -40% -60%;
+    background: radial-gradient(closest-side,
+      rgba(255,210,122,0.42) 0%,
+      rgba(242,166,90,0.20) 42%,
+      rgba(242,166,90,0) 72%);
+    filter: blur(6px);
+    animation: breathe 5.2s ease-in-out infinite;
+  }
+  .flame-svg { position: relative; display: block; margin: 0 auto; animation: flicker 4.6s ease-in-out infinite; transform-origin: 50% 90%; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .72rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--flame);
+    margin: 0 0 1.1rem;
+  }
+  .wordmark {
+    font-family: "Fraunces", Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: clamp(2.6rem, 8vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.1rem;
+    color: var(--ink);
+  }
+  .thesis {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 3.4vw, 1.7rem);
+    line-height: 1.35;
+    color: var(--ink);
+    max-width: 26ch;
+    margin: 0 auto 1.4rem;
+  }
+  .subthesis {
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 auto 1.8rem;
+    font-size: 1rem;
+  }
+  .meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .74rem;
+    letter-spacing: .04em;
+    color: var(--ink-mute);
+  }
+  .meta span { white-space: nowrap; }
+  .meta .dot { color: var(--ember); margin: 0 .55em; }
+
+  /* ---------- Document + wick spine ---------- */
+  .doc {
+    position: relative;
+    padding: clamp(2rem, 6vh, 3.5rem) 0 3rem 3.4rem;
+  }
+  .doc::before {
+    content: "";
+    position: absolute;
+    left: 1.1rem; top: 0; bottom: 2.5rem;
+    width: 2px;
+    background: linear-gradient(to bottom,
+      var(--flame) 0%,
+      var(--flame-deep) 6%,
+      var(--ember) 26%,
+      var(--ember) 100%);
+    border-radius: 2px;
+  }
+
+  .lead {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 400;
+    font-size: 1.22rem;
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: var(--measure);
+    margin: 0 0 3rem;
+  }
+
+  section { position: relative; margin: 0 0 2.9rem; max-width: var(--measure); }
+
+  h2 {
+    position: relative;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 1.34rem;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 0 0 .85rem;
+  }
+  h2 .n {
+    position: absolute;
+    left: -3.4rem;
+    top: 0.05em;
+    width: 2.2rem; height: 2.2rem;
+    display: grid; place-items: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--flame);
+    background: var(--bg);
+    border: 1px solid var(--ember);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+
+  section p { margin: 0 0 1rem; color: var(--ink-soft); }
+  section p:last-child { margin-bottom: 0; }
+  section p strong, li strong { color: var(--ink); font-weight: 600; }
+
+  ul.items { list-style: none; margin: 0 0 1rem; padding: 0; }
+  ul.items li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: 0 0 .6rem;
+    color: var(--ink-soft);
+  }
+  ul.items li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.72em;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--flame-deep);
+  }
+
+  .callout {
+    border-left: 2px solid var(--ember);
+    padding: 0.1rem 0 0.1rem 1.1rem;
+    margin: 1.2rem 0;
+    color: var(--ink-mute);
+    font-size: .95rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    border-top: 1px solid var(--ember);
+    margin-top: 2rem;
+    padding: 2.5rem 0 4rem;
+    color: var(--ink-mute);
+    font-size: .9rem;
+  }
+  footer .contact { color: var(--ink-soft); margin: 0 0 .6rem; }
+  footer .fine { font-family: "IBM Plex Mono", monospace; font-size: .72rem; letter-spacing: .03em; color: var(--ink-mute); margin: 1.4rem 0 0; }
+
+  @keyframes flicker {
+    0%, 100% { transform: translateY(0) scaleX(1); opacity: 1; }
+    25%      { transform: translateY(-1px) scaleX(0.985); opacity: 0.94; }
+    50%      { transform: translateY(0.5px) scaleX(1.015); opacity: 1; }
+    72%      { transform: translateY(-0.5px) scaleX(0.99); opacity: 0.97; }
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.85; transform: scale(1); }
+    50%      { opacity: 1; transform: scale(1.06); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flame-svg, .glow { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 560px) {
+    .doc { padding-left: 2.6rem; }
+    .doc::before { left: 0.75rem; }
+    h2 .n {
+      left: -2.6rem; width: 1.9rem; height: 1.9rem; font-size: .72rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero wrap">
+    <div class="flame-stage" aria-hidden="true">
+      <div class="glow"></div>
+      <svg class="flame-svg" width="64" height="92" viewBox="0 0 64 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="fl" cx="50%" cy="62%" r="60%">
+            <stop offset="0%"  stop-color="#ffe9b0"/>
+            <stop offset="38%" stop-color="#ffd27a"/>
+            <stop offset="72%" stop-color="#f2a65a"/>
+            <stop offset="100%" stop-color="#c9762f"/>
+          </radialGradient>
+          <radialGradient id="core" cx="50%" cy="70%" r="50%">
+            <stop offset="0%" stop-color="#fff6df"/>
+            <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- flame body -->
+        <path d="M32 4 C 44 22, 54 34, 54 52 C 54 70, 44 82, 32 82 C 20 82, 10 70, 10 52 C 10 36, 22 26, 26 16 C 28 22, 27 30, 33 34 C 35 24, 33 14, 32 4 Z" fill="url(#fl)"/>
+        <!-- hot core -->
+        <ellipse cx="32" cy="58" rx="11" ry="16" fill="url(#core)"/>
+        <!-- wick -->
+        <rect x="30.5" y="80" width="3" height="10" rx="1.5" fill="#5a4a38"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Wick — Privacy</p>
+    <h1 class="wordmark">Privacy Policy</h1>
+    <p class="thesis">Your habits never leave your phone.</p>
+    <p class="subthesis">Wick is local-first. There's no account, no cloud, and no tracking. This page explains exactly what that means — and the few places Apple is involved.</p>
+    <p class="meta"><span>Last updated 11 August 2026</span><span class="dot">•</span><span>Published by NoorLyfe</span></p>
+  </header>
+
+  <main class="doc wrap">
+    <p class="lead">This Privacy Policy explains how Wick (“the App”, “we”, “us”) handles information when you use the iOS application Wick. Wick is designed to be local-first: your habits and journal live on your device.</p>
+
+    <section>
+      <h2><span class="n">1</span>Who we are</h2>
+      <p>Wick is published by NoorLyfe (bundle ID <strong>com.noorlyfe.wick</strong>). For privacy requests, contact NoorLyfe at <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span>What Wick stores on your device</h2>
+      <p>Wick stores on your iPhone (via Apple’s local storage technologies such as SwiftData / local database and UserDefaults, including an App Group shared with the optional Home Screen widget):</p>
+      <ul class="items">
+        <li>Habit names, details, icons, colors, ritual windows, weekly targets, timed light duration, sort order, archive state</li>
+        <li>Check-ins, optional mood (flame feel), notes, streak freezes, planned rest weekdays, reminder times</li>
+        <li>App preferences (appearance, haptics, celebration, focus ritual, Face ID lock toggle, onboarding completion, Pro unlock flag mirrored locally after Apple confirms purchase)</li>
+      </ul>
+      <p>This information is not uploaded by Wick to our own servers. We do not operate a Wick account system or Wick cloud backend for habit data.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span>What we do not collect</h2>
+      <p>Wick does not collect, sell, rent, or share for cross-context behavioral advertising:</p>
+      <ul class="items">
+        <li>Name, email, phone, postal address, or government ID</li>
+        <li>Precise location, contacts, photos, microphone, or camera data</li>
+        <li>Advertising identifiers for our own ads (Wick shows no ads)</li>
+        <li>Analytics SDKs, crash reporters, or trackers embedded by us</li>
+        <li>Social graph or browsing history outside the App</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span>Apple services (third parties)</h2>
+      <p>Certain processing is performed by Apple, under Apple’s terms and privacy policy, not by a Wick server:</p>
+      <ul class="items">
+        <li><strong>App Store / StoreKit:</strong> purchase of Wick Pro (auto-renewable subscription, and any legacy lifetime unlock). Apple processes payment, receipt, renewals, and restore. We only learn locally whether Pro is unlocked.</li>
+        <li><strong>Optional Face ID / Touch ID / device passcode:</strong> used only on device to unlock the App if you enable App Lock. Biometric templates stay in the Secure Enclave; Wick never receives your face or fingerprint data.</li>
+        <li><strong>Optional local notifications:</strong> scheduled on device for habit reminders you configure. Wick does not send push notifications from a server.</li>
+        <li><strong>WidgetKit / App Group:</strong> habit summary may be shown on your Home Screen widget using on-device shared storage.</li>
+      </ul>
+      <p>See Apple’s Privacy Policy: <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">apple.com/privacy</a></p>
+    </section>
+
+    <section>
+      <h2><span class="n">5</span>Children (COPPA and similar)</h2>
+      <p>Wick is not directed to children under 13 (or the minimum digital consent age in your country). We do not knowingly collect personal information from children. If you believe a child has provided personal data through a Wick-related channel outside the device store, contact us at <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a> and we will delete what we control.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span>European Economic Area, UK, and Switzerland (GDPR / UK GDPR / FADP)</h2>
+      <p>If you are in the EEA, UK, or Switzerland:</p>
+      <ul class="items">
+        <li><strong>Controller:</strong> NoorLyfe (<a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a>).</li>
+        <li><strong>Legal bases:</strong> (a) performance of a contract / requested service for on-device habit tracking you initiate; (b) legitimate interests for securing the App (optional lock) and fraud prevention around purchases via Apple; (c) consent where required for optional notifications (you can deny or revoke in iOS Settings).</li>
+        <li><strong>Categories of data:</strong> see Section 2 (device-stored) and Section 4 (Apple).</li>
+        <li><strong>Retention:</strong> habit data remains until you delete the App or clear App data; purchase status follows Apple’s records.</li>
+        <li><strong>Your rights:</strong> access, rectification, erasure, restriction, portability, objection, and withdraw consent (where processing is consent-based). Because habit data is on your device, the primary way to erase it is to delete the App or edit/archive habits in Settings. For purchase questions, contact Apple Support as well.</li>
+        <li><strong>International transfers:</strong> Wick does not transfer your habit journal to our servers. Apple may process App Store data per Apple’s disclosures.</li>
+        <li><strong>Supervisory authority:</strong> you may lodge a complaint with your local data protection authority (for example the Danish Datatilsynet, your EU member state DPA, the UK ICO, or the Swiss FDPIC).</li>
+        <li><strong>No automated decision-making</strong> that produces legal or similarly significant effects is performed by Wick.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">7</span>Brazil (LGPD), Canada (PIPEDA / Law 25), Japan (APPI), Australia (Privacy Act), and other regions</h2>
+      <p>Wick’s local-first design means personal habit content is not harvested into a Wick cloud profile. Where these laws grant rights of access, correction, deletion, or complaint, you can exercise them by managing or deleting data in the App / deleting the App, and by contacting us at <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a> for anything we control outside the device. We do not sell personal information.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">8</span>United States — federal and state privacy laws</h2>
+      <p>Wick does not sell personal information and does not share personal information for cross-context behavioral advertising.</p>
+      <p>Depending on your state of residence, you may have rights under laws such as (non-exhaustive):</p>
+      <ul class="items">
+        <li>California Consumer Privacy Act as amended by CPRA (CCPA/CPRA), including rights to know, delete, correct, and opt out of sale/share; Wick does not sell or share as those terms are defined for advertising</li>
+        <li>Virginia Consumer Data Protection Act (VCDPA)</li>
+        <li>Colorado Privacy Act (CPA)</li>
+        <li>Connecticut Data Privacy Act (CTDPA)</li>
+        <li>Utah Consumer Privacy Act (UCPA)</li>
+        <li>Texas Data Privacy and Security Act (TDPSA)</li>
+        <li>Oregon Consumer Privacy Act (OCPA)</li>
+        <li>Montana Consumer Data Privacy Act (MCDPA)</li>
+        <li>Indiana, Kentucky, Rhode Island, Delaware, Iowa, Tennessee, Minnesota, Maryland, New Jersey, New Hampshire, Nebraska, and other comprehensive state privacy laws as they become effective</li>
+        <li>Washington My Health My Data Act and similar sensitive-data laws: Wick is a general habit tracker, not a covered consumer health data marketplace; do not use Wick as a medical record</li>
+        <li>Nevada SB 220 (do not sell)</li>
+      </ul>
+      <p>Because habit data stays on your device, “access” and “deletion” are primarily exercised on device. If a state law applies to residual information we hold (for example a support email you send us), contact us at <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a> and we will respond within the timelines those laws require where applicable. We do not discriminate against you for exercising privacy rights.</p>
+      <p class="callout">California “Notice at Collection”: we collect the categories in Section 2 only on your device for the business purpose of providing the App. We do not collect sensitive personal information as defined under CPRA for the purpose of inferring characteristics, beyond optional Face ID unlock handled by Apple on device.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">9</span>Sensitive information</h2>
+      <p>Do not store medical diagnoses, passwords, financial account numbers, or illegal content in habit notes. Notes are stored locally on your device and are your responsibility.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">10</span>Security</h2>
+      <p>We rely on iOS sandboxing, optional device authentication (Face ID / Touch ID / passcode), and Apple’s purchase infrastructure. No method of storage is perfectly secure. You are responsible for your device passcode and backups (including iCloud device backup if you enable it in iOS — that is Apple’s service, not a Wick server upload initiated by us).</p>
+    </section>
+
+    <section>
+      <h2><span class="n">11</span>Retention and deletion</h2>
+      <p>Delete habits in Settings, or delete the App to remove local Wick data from the device. Widget data in the App Group is removed when the App is deleted. Apple may retain purchase records according to Apple’s policies.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">12</span>Third-party links</h2>
+      <p>Legal links may open Apple’s websites (for example the Standard EULA). Those sites are governed by Apple’s policies.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">13</span>Changes</h2>
+      <p>We may update this Privacy Policy. The “Last updated” date will change. Material changes will be reflected in the App’s Privacy Policy screen. Continued use after an update means you acknowledge the revised policy where permitted by law.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">14</span>Contact</h2>
+      <p>Contact NoorLyfe at <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a>. For purchase billing, contact Apple Support.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p class="contact">Questions about your privacy? Write to <a href="mailto:contact@noorlyfe.com">contact@noorlyfe.com</a>.</p>
+    <p>This Policy is provided in English. Where required by law, you may have the right to receive information in another language; contact us if you need assistance.</p>
+    <p class="fine">Wick · Published by NoorLyfe · Last updated 11 August 2026</p>
+  </footer>
+
+</body>
+</html>
